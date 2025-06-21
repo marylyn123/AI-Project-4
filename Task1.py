@@ -1,35 +1,17 @@
 # Python function to sort a list of dictionaries by a specific key
+
+def manual_sort_dicts_by_key(dicts, key):
+    for i in range(len(dicts)):
+        for j in range(i + 1, len(dicts)):
+            if dicts[i][key] > dicts[j][key]:
+                dicts[i], dicts[j] = dicts[j], dicts[i]
+    return dicts
+
+
 # AI-Suggested Code:
 def sort_dicts_by_key(dicts, key):
     return sorted(dicts, key=lambda x: x[key])
 
-# Manual Implementation
-def manual_sort_dicts_by_key(dicts, key):
-    for i in range(len(dicts)):
-        for j in range(i + 1, len(dicts)):
-            if dicts[i][key] > dicts[j][key]:
-                dicts[i], dicts[j] = dicts[j], dicts[i]
-    return dicts
-
-Here are two implementations for sorting a list of dictionaries by a specific key:
-
-**1. AI-Suggested (Typical Copilot/Tabnine Output):**
-````python
-def sort_dicts_by_key(dicts, key):
-    return sorted(dicts, key=lambda x: x[key])
-````
-
-**2. Manual Implementation:**
-````python
-def manual_sort_dicts_by_key(dicts, key):
-    for i in range(len(dicts)):
-        for j in range(i + 1, len(dicts)):
-            if dicts[i][key] > dicts[j][key]:
-                dicts[i], dicts[j] = dicts[j], dicts[i]
-    return dicts
-````
-
----
 
 ### Analysis
 

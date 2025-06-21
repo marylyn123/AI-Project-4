@@ -1,6 +1,6 @@
 # Python function to sort a list of dictionaries by a specific key
 
-def manual_sort_dicts_by_key(dicts, key):
+def dictionary_sort(dicts, key):
     for i in range(len(dicts)):
         for j in range(i + 1, len(dicts)):
             if dicts[i][key] > dicts[j][key]:
